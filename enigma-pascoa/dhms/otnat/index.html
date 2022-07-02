@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<head>
+	<title>Na real, o que é isso mesmo?</title>
+	  <meta charset="UTF-8">
+	  <meta 
+	  <meta name="description" content="01/08">
+	  <link rel="icon" 
+      type="image/png" 
+      href="https://i.ibb.co/kMTJwcc/13321614-1294138627267068-4417379933619892478-n.png">
+	  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<style>
+	body{
+	background: url(https://i.ibb.co/kMTJwcc/13321614-1294138627267068-4417379933619892478-n.png) no-repeat 50% 0%;
+	background-color: #181818;
+	color:#fff;
+	font-family: 'Roboto', sans-serif;
+	}
+	.sibling-highlight{
+	
+	top:50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+	position:absolute;
+	font-size:40pt;
+	text-align: center;
+	}
+	#demo{
+	background:;
+	color:#AF2828;
+	top:50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+	position:absolute;
+	font-size:50pt;
+	margin-top:100px;
+}
+
+</style>
+
+<script>
+var colors = ["#181818", "#fff"];
+var i = 0;
+var o = 0;
+setInterval(function(){
+  document.body.style.backgroundColor = colors[i];
+    document.body.style.color = colors[o];
+  i = (i == (colors.length -1)) ? 0 : i+1;
+  o = (i == (colors.length -1)) ? 0 : i+1;
+},1000);
+</script>
+
+</head>
+
+<body>
+
+
+    <div class="sibling-highlight">Isso te assusta ou te conforta?</div>
+    <p id="demo"></p>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Jul 31, 2020 23:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "A tempestade chegou.";
+  }
+}, 1000);
+</script>
+</body>
+<html>
